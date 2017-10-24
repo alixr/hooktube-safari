@@ -1,0 +1,10 @@
+<script>
+// Youtube to hooktube
+safari.application.addEventListener("command", performCommand, false);
+function performCommand(event) {
+    if (event.command == "hookTube") {
+		var tab = safari.application.activeBrowserWindow.activeTab;
+        tab.url = tab.url.replace(/youtube/gi,'hooktube');
+    }
+}
+</script>
